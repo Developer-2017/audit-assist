@@ -1,3 +1,5 @@
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
 #page-wrapper.page-loading {
     overflow: hidden;
 }
@@ -1106,7 +1108,7 @@ a.sidebar-title:focus {
 }
 
 .widget-simple {
-    padding: 15px;
+    padding: 0px;
 }
 
 .widget-simple:before,
@@ -10258,10 +10260,76 @@ http://ricostacruz.com/nprogress
      margin-top: 20px;
      margin-bottom: 20px;
      align-items: center;
-     justify-content: space-between;
 }
 .login_div button{
      padding: 5px;
      margin-right: 10px;
 }
+#page-content{
+     height: 90vh;
+}
 
+.widget-simple{
+     height: 100px;
+     display: flex;
+     align-items: center;
+}
+.widget-simple .user{
+ color: #ffffff;
+}
+.widget-simple .widget-icon{
+     background-color: #af64cc;
+}
+.widget-simple .client{
+     background-color: #27ae60;
+}
+.widget-simple .text{
+     background-color: #e67e22;
+}
+.widget-simple .query{
+     background-color: #e74c3c;
+}
+.widget-simple .wallet{
+    background-color: #1bbae1;
+}
+.widget-simple .crown{
+     background-color: #1bbae1;
+}
+.widget-simple .widget-icon.pull-left {
+    margin-left: 20px;
+}
+.widget-simple .userText{
+     margin-left: 80px;
+     float: right;
+     text-align: right;
+}
+.widget-simple .userClient{
+    margin-left: 72px;
+    float: right;
+    text-align: right;
+}
+.widget-simple .userProject{
+    margin-left: 65px;
+    float: right;
+    text-align: right;
+}
+.widget-simple .userQuery{
+    margin-left: 50px;
+    float: right;
+    text-align: right;
+}
+.widget-simple .report{
+    float: left;
+}
+.clearfix{
+     background-color: whitesmoke;
+     text-align: center;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-form-field
+{
+    width: 100%;
+}

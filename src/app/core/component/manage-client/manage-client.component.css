@@ -1,0 +1,16 @@
+#page-content{
+     margin: 0;
+     padding: 0;
+     overflow-y: none;
+}
+.m-client{
+     margin-right: 10px;
+}
+.m-manage a{
+    text-decoration: none;
+    margin-left: 10px;
+}
+.m_main_div{
+     height: 470px;
+     background-color: #fff;
+}

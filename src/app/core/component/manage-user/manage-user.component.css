@@ -1,0 +1,11 @@
+#page-content{
+     margin: 0;
+     padding: 0;
+}
+.m-client{
+    margin-right: 10px;
+}
+.m-manage a{
+   text-decoration: none;
+   margin-left: 10px;
+}

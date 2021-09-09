@@ -1,0 +1,66 @@
+<div id="page-content">
+    <!-- Validation Header -->
+    <div class="content-header">
+        <div class="header-section">
+            <h1>
+                <i class="fa fa-asterisk fa-spin"></i>Import Master Assets<br><small>Upload all master assets for the selected clients !</small>
+            </h1>
+        </div>
+    </div>
+    <ul class="breadcrumb breadcrumb-top">
+        <li class="p-project">Asset</li>
+        <li class="p-add"><a href="#">Add</a></li>
+    </ul>
+    <div class="container-fluid">
+        <div class="block">
+            <!-- Progress Bars Wizard Title -->
+            <div class="block-title">
+                <h2>Fill Project Details</h2>
+            </div>
+            <!-- END Progress Bar Wizard Title -->
+    
+            <!-- Progress Bar Wizard Content -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-control my_border">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Choose a Client..</mat-label>
+                            <mat-select>
+                              <mat-option>
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                  </div>
+               
+                <div class="col-md-4">
+                    <div class="form-control my_border">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Choose a Project..</mat-label>
+                            <mat-select>
+                              <mat-option>
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                  </div>
+                <div class="col-md-4"> 
+                    <div class="form-control my_border">
+                        <ngx-file-drop dropZoneLabel="Drop files here">
+                            <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+                              Optional custom content that replaces the the entire default content.
+                              <button type="button">Browse Files</button>
+                            </ng-template>
+                        </ngx-file-drop>
+                        </div>               
+                </div>
+                <div class="col-md-12">
+                    <button mat-raised-button class="btn btn-success float-end m-2">Import</button>
+                    </div>
+           
+            </div>
+           
+            
+        </div>
+    </div>
+</div>

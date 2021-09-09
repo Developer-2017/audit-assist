@@ -1,0 +1,36 @@
+<div id="page-content">
+    <!-- Validation Header -->
+    <div class="content-header">
+        <div class="header-section">
+            <h1>
+                <i class="fa fa-asterisk fa-spin"></i>Manage User<br><small>Manage All Users Here !</small>
+            </h1>
+        </div>
+    </div>
+    <ul class="breadcrumb breadcrumb-top">
+        <li class="m-client">Users</li>
+        <li class="m-manage"><a href="#">Manage</a></li>
+    </ul>
+    <div class="container-fluid">
+        <div class="block">
+            <!-- Progress Bars Wizard Title -->
+            <div class="block-title">
+                <h2><strong>Clients </strong>Added</h2>
+            </div>
+            <!-- END Progress Bar Wizard Title -->
+    
+            <!-- Progress Bar Wizard Content -->
+            <div class="row">
+                
+                    <ag-grid-angular
+                    style="width: 100%; height: 380px;"
+                    class="ag-theme-balham"
+                    [rowData]="rowData"
+                    [columnDefs]="columnDefs">
+                   </ag-grid-angular>
+                  
+              
+            </div>
+            <!-- END Progress Bar Wizard Content -->
+        </div>
+    </div>
