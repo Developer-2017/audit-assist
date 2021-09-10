@@ -39,51 +39,98 @@
                   <!-- Theme Colors -->
                   <!-- Sidebar Navigation -->
                   <ul class="sidebar-nav">
-                      <li>
-                          <a href="index.html"><i class="fa fa-tachometer sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Dashboard</span></a>
-                      </li>
-                      <li>
-                          <a href="index2.html"><i class="fa fa-usd sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Clients</span></a>
-                      </li>
-                      <li>
-                          <a href="index2.html"><i class="fa fa-file-text-o sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Projects</span></a>
-                      </li>
-                      <li>
-                          <a href="index2.html"><i class="fa fa-user sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">User</span></a>
-                      </li>
-                      <li>
-                          <a href="index2.html"><i class="fa fa-files-o sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Master Assets</span></a>
-                      </li>
-                      <li>
-                          <a href="index2.html"><i class="fa fa-envelope sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Contacts</span></a>
-                      </li>
-                      <li>
-                          <a href="index2.html"><i class="fa fa-envelope sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Queries</span></a>
-                      </li>
-                      <li>
-                          <a href="index2.html"><i class="fa fa-check-square-o sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Audits</span></a>
-                      </li>
-                      <li>
-                          <a href="index2.html"><i class="fa fa-pie-chart sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Reports</span></a>
-                      </li>
-
-                      <li>
-                        <a href="/dashboard" class="sidebar-nav-menu">
-                            <i class="fa fa-angle-left sidebar-nav-indicator sidebar-nav-mini-hide"></i>
-                            <i class="gi gi-user sidebar-nav-icon"></i>
-                            <span class="sidebar-nav-mini-hide">Manage Vendors</span></a>
-                        <ul>
-
-                            <li>
-                                <a href="/add-vendor" runat="server">Add Vendor </a>
-                            </li>
-                            <li>
-                                <a href="/manage-vendor" runat="server">View Vendor</a>
-                            </li>
-
-                        </ul>
+                    <li>
+                        <a href="index.html" class="text-decoration-none"><i
+                                class="fa fa-tachometer sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Dashboard
+                            </span></a>
                     </li>
-                 </ul>
+                    <li>
+                        <a href="index2.html" class="text-decoration-none" data-bs-toggle="collapse"
+                            href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+                            <i class="fa fa-angle-right sidebar-nav-indicator sidebar-nav-mini-hide"></i>
+                            <i class="fa fa-usd sidebar-nav-icon"></i>
+                            <span class="sidebar-nav-mini-hide">Clients</span></a>
+                        <div class="collapse" id="collapseExample1">
+                            <div class="ms-4 p-1">Add Client</div>
+                            <div class="ms-4 p-1">Manage Client</div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none" data-bs-toggle="collapse" href="#collapseExample"
+                            role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <i class="fa fa-angle-right sidebar-nav-indicator sidebar-nav-mini-hide"></i>
+                            <i class="fa fa-file-text-o sidebar-nav-icon"></i>
+                            <span class="sidebar-nav-mini-hide">Projects</span></a>
+                        <div class="collapse" id="collapseExample">
+                            <div class="ms-4 p-1">Add Project</div>
+                            <div class="ms-4 p-1">Manage Project</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="index2.html" data-bs-toggle="collapse" href="#collapseExample3" role="button"
+                            aria-expanded="false" aria-controls="collapseExample3" class="text-decoration-none">
+                            <i class="fa fa-angle-right sidebar-nav-indicator sidebar-nav-mini-hide"></i>
+                            <i class="fa fa-user sidebar-nav-icon"></i>
+                            <span class="sidebar-nav-mini-hide">User</span></a>
+                        <div class="collapse" id="collapseExample3">
+                            <div class="ms-4 p-1">Add User</div>
+                            <div class="ms-4 p-1">Manage User</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none" data-bs-toggle="collapse" href="#collapseExample4"
+                            role="button" aria-expanded="false" aria-controls="collapseExample4">
+                            <i class="fa fa-angle-right sidebar-nav-indicator sidebar-nav-mini-hide"></i>
+                            <i class="fa fa-files-o sidebar-nav-icon"></i>
+                            <span class="sidebar-nav-mini-hide">Master Assets</span></a>
+                        <div class="collapse" id="collapseExample4">
+                            <div class="ms-4 p-1">Add Master Assets</div>
+                            <div class="ms-4 p-1">Manage Master Assets</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none" data-bs-toggle="collapse" href="#collapseExample5"
+                            role="button" aria-expanded="false" aria-controls="collapseExample5">
+                            <i class="fa fa-angle-right sidebar-nav-indicator sidebar-nav-mini-hide"></i>
+                            <i class="fa fa-envelope sidebar-nav-icon"></i>
+                            <span class="sidebar-nav-mini-hide">Contacts</span></a>
+                        <div class="collapse" id="collapseExample5">
+                            <div class="ms-4 p-1">Manage Contact</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none" data-bs-toggle="collapse" href="#collapseExample6"
+                            role="button" aria-expanded="false" aria-controls="collapseExample6">
+                            <i class="fa fa-angle-right sidebar-nav-indicator sidebar-nav-mini-hide"></i>
+                            <i class="fa fa-envelope sidebar-nav-icon"></i>
+                            <span class="sidebar-nav-mini-hide">Queries</span></a>
+                        <div class="collapse" id="collapseExample6">
+                            <div class="ms-4 p-1">Manage Queries</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none" data-bs-toggle="collapse" href="#collapseExample7"
+                            role="button" aria-expanded="false" aria-controls="collapseExample7">
+                            <i class="fa fa-angle-right sidebar-nav-indicator sidebar-nav-mini-hide"></i>
+                            <i class="fa fa-check-square-o sidebar-nav-icon"></i>
+                            <span class="sidebar-nav-mini-hide">Audits</span></a>
+                        <div class="collapse" id="collapseExample7">
+                            <div class="ms-4 p-1">Manage Audits</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none" data-bs-toggle="collapse" href="#collapseExample8"
+                            role="button" aria-expanded="false" aria-controls="collapseExample8">
+                            <i class="fa fa-angle-right sidebar-nav-indicator sidebar-nav-mini-hide"></i>
+                            <i class="fa fa-pie-chart sidebar-nav-icon"></i>
+                            <span class="sidebar-nav-mini-hide">Reports</span></a>
+                        <div class="collapse" id="collapseExample8">
+                            <div class="ms-4 p-1">Report One</div>
+                            <div class="ms-4 p-1">Report Two</div>
+                        </div>
+                    </li>
+                </ul>
       </div>
 
       </div>
