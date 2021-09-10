@@ -27,6 +27,9 @@ import { NgxFileDropModule } from 'ngx-file-drop';
 import { ManageMasterAssetComponent } from './core/component/manage-master-asset/manage-master-asset.component';
 import { ContactComponent } from './core/component/contact/contact.component';
 import { QueriesComponent } from './core/component/queries/queries.component';
+import { AuditsComponent } from './core/component/audits/audits.component';
+import { ReportOneComponent } from './core/component/report-one/report-one.component';
+
 
 @NgModule({
   declarations: [
@@ -46,6 +49,8 @@ import { QueriesComponent } from './core/component/queries/queries.component';
     ManageMasterAssetComponent,
     ContactComponent,
     QueriesComponent,
+    AuditsComponent,
+    ReportOneComponent,
   ],
   imports: [
     BrowserModule,

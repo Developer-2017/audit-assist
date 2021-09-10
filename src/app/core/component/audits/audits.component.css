@@ -1,0 +1,27 @@
+#page-content{
+    margin: 0;
+    padding: 0;
+}
+.block-title{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: 55px;
+}
+.example-form{
+    margin-right: 10px;
+    margin-top: 16px;
+}
+.example-form input{
+    font-size: 10px;
+}
+.asset_div{
+     display: flex;
+     align-items: center;
+}
+.asset_div button{
+     height: 40px;
+     margin-right: 10px;
+     border: none;
+     border-radius: 10px;
+}

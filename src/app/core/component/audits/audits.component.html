@@ -1,0 +1,54 @@
+<div id="page-content">
+    <!-- Validation Header -->
+    <div class="content-header">
+        <div class="header-section">
+            <h1>
+                <i class="fa fa-asterisk fa-spin"></i>Manage Audits<br><small>Manage All Audits Here !</small>
+            </h1>
+        </div>
+    </div>
+    <ul class="breadcrumb breadcrumb-top">
+        <li class="p-project">Audits</li>
+        <li class="p-add"><a href="#">Manage</a></li>
+    </ul>
+    <div class="container-fluid">
+        <div class="block">
+            <!-- Progress Bars Wizard Title -->
+            <div class="block-title">
+                <h2>Assets Added</h2>
+                 <div class="asset_div">
+                <form class="example-form">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Choose a Client</mat-label>
+                      <input type="text"
+                             placeholder="Pick one"
+                             aria-label="Number"
+                             matInput
+                             [matAutocomplete]="auto">
+                      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                        <mat-option >
+                        </mat-option>
+                      </mat-autocomplete>
+                    </mat-form-field>
+                  </form>
+                  <form class="example-form">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                      <mat-label>Choose a Client</mat-label>
+                      <input type="text"
+                             placeholder="Pick one"
+                             aria-label="Number"
+                             matInput
+                             [matAutocomplete]="auto">
+                      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                        <mat-option >
+                        </mat-option>
+                      </mat-autocomplete>
+                    </mat-form-field>
+                  </form>
+                  <button class="btn btn-success btn-sm">Export</button>
+                  </div>
+            </div>
+    </div>
+    </div>
+
+

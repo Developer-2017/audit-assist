@@ -14,11 +14,16 @@ import { AddMasterAssetComponent } from './core/component/add-master-asset/add-m
 import { ManageMasterAssetComponent } from './core/component/manage-master-asset/manage-master-asset.component';
 import { ContactComponent } from './core/component/contact/contact.component';
 import { QueriesComponent } from './core/component/queries/queries.component';
+import { LoginComponent } from './shared/login/login.component';
+import { AuditsComponent } from './core/component/audits/audits.component';
+import { ReportOneComponent } from './core/component/report-one/report-one.component';
+
 
 
 
 
 const routes: Routes = [
+  {path : '' , component:  LoginComponent},
   {path : 'sidebar' , component:  SidebarComponent},
   {path : 'header' , component :HeaderComponent },
   {path : 'footer' , component : FooterComponent },
@@ -33,6 +38,9 @@ const routes: Routes = [
   {path : 'manage-master-asset' , component : ManageMasterAssetComponent},
   {path : 'contact' , component : ContactComponent},  
   {path : 'queries' , component : QueriesComponent},  
+  {path : 'audits' , component : AuditsComponent},  
+  {path : 'report-one' , component : ReportOneComponent},  
+
 
 
 
