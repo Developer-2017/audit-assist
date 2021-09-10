@@ -21,37 +21,42 @@
     
             <!-- Progress Bar Wizard Content -->
             <div class="row">
-                <div class="col-md-4">
-                    <div class="form-control my_border">
-                        <mat-form-field appearance="outline">
-                            <mat-label>Choose a Client..</mat-label>
-                            <mat-select>
-                              <mat-option>
-                              </mat-option>
-                            </mat-select>
-                          </mat-form-field>
-                    </div>
-                  </div>
+                <div class="col-md-8">
+                    <div class="col-md-12">
+                        <div class="form-control my_border">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Choose a Client..</mat-label>
+                                <mat-select>
+                                  <mat-option>
+                                  </mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                        </div>
+                      </div>
+                   
+                    <div class="col-md-12">
+                        <div class="form-control my_border">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Choose a Project..</mat-label>
+                                <mat-select>
+                                  <mat-option>
+                                  </mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                        </div>
+                      </div>
+                </div>
                
-                <div class="col-md-4">
-                    <div class="form-control my_border">
-                        <mat-form-field appearance="outline">
-                            <mat-label>Choose a Project..</mat-label>
-                            <mat-select>
-                              <mat-option>
-                              </mat-option>
-                            </mat-select>
-                          </mat-form-field>
-                    </div>
-                  </div>
                 <div class="col-md-4"> 
                     <div class="form-control my_border">
-                        <ngx-file-drop dropZoneLabel="Drop files here">
+                        <ngx-file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)" 
+                        (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
                             <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
-                              Optional custom content that replaces the the entire default content.
-                              <button type="button">Browse Files</button>
+                              
+                              <button type="button" class="btn btn-primary " (click)="openFileSelector()">Browse Files</button>
                             </ng-template>
                         </ngx-file-drop>
+                     
                         </div>               
                 </div>
                 <div class="col-md-12">

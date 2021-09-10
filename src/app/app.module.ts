@@ -28,7 +28,7 @@ import { ContactComponent } from './core/component/contact/contact.component';
 import { QueriesComponent } from './core/component/queries/queries.component';
 import { AuditsComponent } from './core/component/audits/audits.component';
 import { ReportOneComponent } from './core/component/report-one/report-one.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -62,6 +62,7 @@ import { ReportOneComponent } from './core/component/report-one/report-one.compo
     MatDialogModule,
     AgGridModule,
     MatAutocompleteModule,
+    HttpClientModule,
     NgxFileDropModule
   ],
   providers: [],

@@ -1,7 +1,7 @@
    <div id="page-wrapper">
 
     <div class="preloader themed-background">
-        <h1 class="push-top-bottom text-light text-center"><strong>Pro</strong>UI</h1>
+        <h1 class="push-top-bottom text-light text-center"><strong>LML </strong>Ventures</h1>
         <div class="inner">
             <h3 class="text-light visible-lt-ie10"><strong>Loading..</strong></h3>
             <div class="preloader-spinner hidden-lt-ie10"></div>
@@ -16,13 +16,13 @@
               <div class="sidebar-content">
                   <!-- Brand -->
                   <a routerLink="/dashboard" class="sidebar-brand"  (click)="toggleShow()"  >
-                      <i class="fa fa-bars fa-fw"></i><span class="sidebar-nav-mini-hide"><strong>Audit </strong>Assist</span>
+                      <i class="fa fa-bars fa-fw"></i><span class="sidebar-nav-mini-hide"><strong>LML </strong>Ventures</span>
                   </a>
 
                   <div class="sidebar-section sidebar-user clearfix sidebar-nav-mini-hide">
                       <div class="sidebar-user-avatar">
                           <a href="page_ready_user_profile.html">
-                              <img src="img/placeholders/avatars/avatar2.jpg" alt="avatar">
+                              <img src="/assets/Images/logo.jpeg" alt="avatar">
                           </a>
                       </div>
                       <div class="sidebar-user-name">John Doe</div>
@@ -40,7 +40,7 @@
                   <!-- Sidebar Navigation -->
                   <ul class="sidebar-nav">
                     <li>
-                        <a href="index.html" class="text-decoration-none"><i
+                        <a routerLink="/dashboard" class="text-decoration-none"><i
                                 class="fa fa-tachometer sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Dashboard
                             </span></a>
                     </li>
@@ -51,8 +51,8 @@
                             <i class="fa fa-usd sidebar-nav-icon"></i>
                             <span class="sidebar-nav-mini-hide">Clients</span></a>
                         <div class="collapse" id="collapseExample1">
-                            <div class="ms-4 p-1">Add Client</div>
-                            <div class="ms-4 p-1">Manage Client</div>
+                            <div class="hover p-2" routerLink="/client" >Add Client</div>
+                            <div class="hover p-2" routerLink="/manage-client">Manage Client</div>
                         </div>
 
                     </li>
@@ -63,8 +63,8 @@
                             <i class="fa fa-file-text-o sidebar-nav-icon"></i>
                             <span class="sidebar-nav-mini-hide">Projects</span></a>
                         <div class="collapse" id="collapseExample">
-                            <div class="ms-4 p-1">Add Project</div>
-                            <div class="ms-4 p-1">Manage Project</div>
+                            <div class="hover p-2" routerLink="/project">Add Project</div>
+                            <div class="hover p-2"routerLink="/manage-project">Manage Project</div>
                         </div>
                     </li>
                     <li>
@@ -74,8 +74,8 @@
                             <i class="fa fa-user sidebar-nav-icon"></i>
                             <span class="sidebar-nav-mini-hide">User</span></a>
                         <div class="collapse" id="collapseExample3">
-                            <div class="ms-4 p-1">Add User</div>
-                            <div class="ms-4 p-1">Manage User</div>
+                            <div class="hover p-2" routerLink="/user">Add User</div>
+                            <div class="hover p-2" routerLink="/manage-user">Manage User</div>
                         </div>
                     </li>
                     <li>
@@ -85,8 +85,8 @@
                             <i class="fa fa-files-o sidebar-nav-icon"></i>
                             <span class="sidebar-nav-mini-hide">Master Assets</span></a>
                         <div class="collapse" id="collapseExample4">
-                            <div class="ms-4 p-1">Add Master Assets</div>
-                            <div class="ms-4 p-1">Manage Master Assets</div>
+                            <div class="hover p-2"routerLink="/master-asset">Add Master Assets</div>
+                            <div class="hover p-2"routerLink="/manage-master-asset">Manage Master Assets</div>
                         </div>
                     </li>
                     <li>
@@ -96,7 +96,7 @@
                             <i class="fa fa-envelope sidebar-nav-icon"></i>
                             <span class="sidebar-nav-mini-hide">Contacts</span></a>
                         <div class="collapse" id="collapseExample5">
-                            <div class="ms-4 p-1">Manage Contact</div>
+                            <div class="p-2 hover"routerLink="/contact">Manage Contact</div>
                         </div>
                     </li>
                     <li>
@@ -106,7 +106,7 @@
                             <i class="fa fa-envelope sidebar-nav-icon"></i>
                             <span class="sidebar-nav-mini-hide">Queries</span></a>
                         <div class="collapse" id="collapseExample6">
-                            <div class="ms-4 p-1">Manage Queries</div>
+                            <div class="p-2 hover"routerLink="/queries">Manage Queries</div>
                         </div>
                     </li>
                     <li>
@@ -116,7 +116,7 @@
                             <i class="fa fa-check-square-o sidebar-nav-icon"></i>
                             <span class="sidebar-nav-mini-hide">Audits</span></a>
                         <div class="collapse" id="collapseExample7">
-                            <div class="ms-4 p-1">Manage Audits</div>
+                            <div class="p-2 hover"routerLink="/audits">Manage Audits</div>
                         </div>
                     </li>
                     <li>
@@ -126,17 +126,14 @@
                             <i class="fa fa-pie-chart sidebar-nav-icon"></i>
                             <span class="sidebar-nav-mini-hide">Reports</span></a>
                         <div class="collapse" id="collapseExample8">
-                            <div class="ms-4 p-1">Report One</div>
-                            <div class="ms-4 p-1">Report Two</div>
+                            <div class="p-2 hover"routerLink="/report-one">Report One</div>
+                            <div class="p-2 hover" routerLink="/report-one">Report Two</div>
                         </div>
                     </li>
                 </ul>
       </div>
 
       </div>
-
-
-
         <!-- Main Container -->
         <div id="main-container">
 
