@@ -8,7 +8,7 @@
         </div>
     </div>
     <ul class="breadcrumb breadcrumb-top">
-        <li class="p-project">Projects</li>
+        <li class="p-project">Users</li>
         <li class="p-add"><a href="#">Add</a></li>
     </ul>
     <div class="container-fluid">
@@ -23,57 +23,58 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-control my_border">
-                    <mat-form-field>
+                    <mat-form-field appearance="outline">
                         <mat-label>Enter Project Code</mat-label>
                    <input matInput>
                     </mat-form-field>
                     </div>
                   </div>
-                <div class="col-md-4">                
-                </div>
-                <div class="col-md-4">
-                </div>
-            </div>
-            <div class="row">
+               
                 <div class="col-md-4">
                     <div class="form-control my_border">
-                    <mat-form-field>
-                        <mat-label>Choose a Client</mat-label>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter Project Alias</mat-label>
                    <input matInput>
                     </mat-form-field>
                     </div>
                   </div>
                 <div class="col-md-4"> 
                     <div class="form-control my_border">
-                        <mat-form-field>
-                            <mat-label>Enter Project Alias</mat-label>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Enter Project Name</mat-label>
                        <input matInput>
                         </mat-form-field>
                         </div>               
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4"> 
                     <div class="form-control my_border">
-                        <mat-form-field>
-                            <mat-label>Enter Project Name</mat-label>
-                       <input matInput>
-                        </mat-form-field>
-                        </div>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Choose a Client</mat-label>
+                            <select matNativeControl>
+                              <option value=""></option>
+                              <option></option>
+                            </select>
+                          </mat-form-field>
+                        </div>               
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-8"> 
                     <div class="form-control my_border">
-                        <mat-form-field>
+                        <mat-form-field appearance="outline">
                             <mat-label>Choose Columns..</mat-label>
-                       <input matInput>
-                        </mat-form-field>
-                        </div>
-                </div> 
+                            <mat-select  multiple>
+                              <mat-option></mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>               
+                </div>   
+                <div class="col-md-12">
+                    <button mat-raised-button class="btn btn-warning float-end m-2">Reset</button>
+                    <button mat-raised-button class="btn btn-success float-end m-2">Save</button>
+                    </div>
+           
             </div>
-             <div class="my_btn">
-            <button mat-raised-button color="primary" class="save">Save</button>
-            <button mat-raised-button color="primary" class="reset">Reset</button>
-            </div>
-            <!-- END Progress Bar Wizard Content -->
+           
+            
         </div>
     </div>
+</div>

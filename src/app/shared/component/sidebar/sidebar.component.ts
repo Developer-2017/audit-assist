@@ -16,7 +16,9 @@ this.isShown = ! this.isShown;
 
 }
   constructor() { }
-
+   openMenu(x : any){
+      x.open();
+   }
   ngOnInit(): void {
   }
 

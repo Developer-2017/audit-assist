@@ -9,7 +9,7 @@
     </div>
     <ul class="breadcrumb breadcrumb-top">
         <li class="p-project">Assets</li>
-        <li class="p-add"><a href="#">Add</a></li>
+        <li class="p-add"><a href="#">Manage</a></li>
     </ul>
     <div class="container-fluid">
         <div class="block">
@@ -18,31 +18,27 @@
                 <h2>Assets Added</h2>
                  <div class="asset_div">
                 <form class="example-form">
-                    <mat-form-field class="example-full-width" appearance="outline">
-                      <mat-label>Choose a Client</mat-label>
-                      <input type="text"
-                             placeholder="Pick one"
-                             aria-label="Number"
-                             matInput
-                             [matAutocomplete]="auto">
-                      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                        <mat-option >
-                        </mat-option>
-                      </mat-autocomplete>
-                    </mat-form-field>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Choose a Client</mat-label>
+                    <select matNativeControl>
+                      <option value="" selected></option>
+                      <option value="volvo">Volvo</option>
+                      <option value="saab" disabled>Saab</option>
+                      <option value="mercedes">Mercedes</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </mat-form-field>
                   </form>
                   <form class="example-form">
-                    <mat-form-field class="example-full-width" appearance="outline">
-                      <mat-label>Choose a Client</mat-label>
-                      <input type="text"
-                             placeholder="Pick one"
-                             aria-label="Number"
-                             matInput
-                             [matAutocomplete]="auto">
-                      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                        <mat-option >
-                        </mat-option>
-                      </mat-autocomplete>
+                    <mat-form-field appearance="outline">
+                      <mat-label>Choose a Project</mat-label>
+                      <select matNativeControl>
+                        <option value="" selected></option>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab" disabled>Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                      </select>
                     </mat-form-field>
                   </form>
                   </div>
