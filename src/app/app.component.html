@@ -1,7 +1,5 @@
    <div id="page-wrapper">
-    <!-- Preloader -->
-    <!-- Preloader functionality (initialized in js/app.js) - pageLoading() -->
-    <!-- Used only if page preloader is enabled from inc/config (PHP version) or the class 'page-loading' is added in #page-wrapper element (HTML version) -->
+
     <div class="preloader themed-background">
         <h1 class="push-top-bottom text-light text-center"><strong>Pro</strong>UI</h1>
         <div class="inner">
@@ -9,23 +7,23 @@
             <div class="preloader-spinner hidden-lt-ie10"></div>
         </div>
     </div>
-    <div id="page-container" class="sidebar-mini sidebar-visible-lg-mini sidebar-no-animations">
-        <app-sidebar></app-sidebar>
+    <div id="page-container" class="sidebar-mini sidebar-visible-lg sidebar-no-animations">
+        <app-sidebar *ngIf="showHead"></app-sidebar>
 
         <!-- Main Container -->
         <div id="main-container">
-          
-            <app-header></app-header>
+
+            <app-header  *ngIf="showHead"></app-header>
             <!-- END Header -->
 
             <!-- Page content -->
-            <div id="page-content">
+
                <router-outlet></router-outlet>
-            </div>
+
             <!-- END Page Content -->
 
             <!-- Footer -->
-            <app-footer></app-footer>
+            <app-footer  *ngIf="showHead"></app-footer>
             <!-- END Footer -->
         </div>
         <!-- END Main Container -->

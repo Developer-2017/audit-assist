@@ -1,10 +1,4 @@
-#page-content{
-     margin: 0;
-     padding: 0;
-}
- .block{
-      height: 420px;
- }
+
 /* .client{
      margin-right: 10px;
 }
@@ -23,8 +17,8 @@
      background-color: #f9fafc;
 }
 .main_div .div1{
-    height: 300px; 
-    margin-left: 60px; 
+    height: 300px;
+    margin-left: 60px;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -34,20 +28,20 @@
 }
 .main_div .div2{
      height: 300px;
-     margin-top: 20px; 
+     margin-top: 20px;
      display: flex;
-     flex-direction: column; 
+     flex-direction: column;
  }
  .main_div .div2 .first_div{
        margin-top: 95px;
  }
- 
+
  .main_div .div2 .email_code{
      margin-top: 20px;
  }
  .main_div .div3{
-     height: 300px; 
-     margin-top: 20px; 
+     height: 300px;
+     margin-top: 20px;
      display: flex;
      flex-direction: column;
  }
@@ -66,8 +60,8 @@
  }
     .my_btn{
       display: flex;
-      justify-content: end;  
-      padding: 5px;   
+      justify-content: end;
+      padding: 5px;
     }
     .reset{
      float: right;

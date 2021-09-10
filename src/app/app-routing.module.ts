@@ -24,6 +24,7 @@ import { ReportOneComponent } from './core/component/report-one/report-one.compo
 
 const routes: Routes = [
   {path : '' , component:  LoginComponent},
+  {path : 'login' , component:  LoginComponent},
   {path : 'sidebar' , component:  SidebarComponent},
   {path : 'header' , component :HeaderComponent },
   {path : 'footer' , component : FooterComponent },
