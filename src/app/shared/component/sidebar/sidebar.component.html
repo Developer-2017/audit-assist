@@ -1,13 +1,14 @@
 
 
 <!-- Main Sidebar -->
-<div id="sidebar"  class="sidebar-mini sidebar-visible-lg-mini sidebar-no-animations">
+<div id="page-container"    class="sidebar-mini sidebar-no-animations">
+<div id="sidebar" >
     <!-- Wrapper for scrolling functionality -->
     <div id="sidebar-scroll">
         <!-- Sidebar Content -->
         <div class="sidebar-content">
             <!-- Brand -->
-            <a routerLink="/dashboard" class="sidebar-brand" (click)="isMenuOpen=!isMenuOpen" >
+            <a routerLink="/dashboard" class="sidebar-brand"  (click)="toggleShow()"  >
                 <i class="fa fa-bars fa-fw"></i><span class="sidebar-nav-mini-hide"><strong>Audit </strong>Assist</span>
             </a>
 
@@ -29,8 +30,6 @@
             <!-- END User Info -->
 
             <!-- Theme Colors -->
-
-
             <!-- Sidebar Navigation -->
             <ul class="sidebar-nav">
                 <li>
@@ -77,6 +76,8 @@
 
                   </ul>
               </li>
-                </ul>
+           </ul>
+</div>
+</div>
 </div>
 </div>

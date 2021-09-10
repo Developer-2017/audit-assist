@@ -6,7 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
-  public isMenuOpen:boolean=false;
+
+  isShown: boolean = false ; // hidden by default
+
+
+toggleShow() {
+
+this.isShown = ! this.isShown;
+
+}
   constructor() { }
 
   ngOnInit(): void {
