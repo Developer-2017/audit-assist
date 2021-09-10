@@ -26,7 +26,6 @@ rowData = [
  defaultColDef = {
     autoHeight : true
  }
-
   constructor() { }
 
   ngOnInit(): void {

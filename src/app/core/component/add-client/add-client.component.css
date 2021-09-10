@@ -1,81 +1,19 @@
 #page-content{
      margin: 0;
      padding: 0;
-}
- .block{
-      height: 420px;
- }
-/* .client{
-     margin-right: 10px;
-}
-.main_div{
-      height: 450px;
-      background-color: #fff;
-      border: 1px solid lightgray;
-      margin: 0;
-      padding: 0;
-      margin-bottom: 30px;
-}
-.main_div .main_div_heading{
-     border-bottom:1px solid lightgray;
-     padding: 10px;
-     font-size: 20px;
-     background-color: #f9fafc;
-}
-.main_div .div1{
-    height: 300px; 
-    margin-left: 60px; 
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-}
-.main_div .div1 .client_code{
-    margin-top: 20px;
-}
-.main_div .div2{
-     height: 300px;
-     margin-top: 20px; 
-     display: flex;
-     flex-direction: column; 
- }
- .main_div .div2 .first_div{
-       margin-top: 95px;
  }
  
- .main_div .div2 .email_code{
-     margin-top: 20px;
- }
- .main_div .div3{
-     height: 300px; 
-     margin-top: 20px; 
-     display: flex;
-     flex-direction: column;
- }
- .main_div .div3 .first_div{
-     margin-top: 95px;
-}
-.main_div .div3 .email_code{
-     margin-top: 20px;
- } */
- .save{
-       float: right;
-       margin-top: 10px;
-       background-color: #3bbf60;
-       border: 1px solid #22a70b;
-       margin-right: 20px;
- }
-    .my_btn{
-      display: flex;
-      justify-content: end;  
-      padding: 5px;   
-    }
-    .reset{
-     float: right;
-     margin-top: 10px;
-     background-color: #ec6153;
-     border: 1px solid #e74c3c;
-     margin-right: 10px;
-}
-.my_border{
+ .my_border{
      border: none;
-}
+ }
+ .p-project{
+      margin-right: 10px;
+ }
+  .p-add{
+       margin-left: 5px;
+  }
+  .p-add a{
+     margin-left: 5px;
+     text-decoration: none;
+ }
+ 

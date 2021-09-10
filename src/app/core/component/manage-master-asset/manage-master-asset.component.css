@@ -18,3 +18,13 @@
 .asset_div{
      display: flex;
 }
+.p-project{
+    margin-right: 10px;
+}
+.p-add{
+     margin-left: 5px;
+}
+.p-add a{
+   margin-left: 5px;
+   text-decoration: none;
+}
