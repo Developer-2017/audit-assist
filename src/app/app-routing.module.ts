@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SidebarComponent } from './shared/login/component/sidebar/sidebar.component';
-import { HeaderComponent } from './shared/login/component/header/header.component';
-import { FooterComponent } from './shared/login/component/footer/footer.component';
+import { SidebarComponent } from './shared/component/sidebar/sidebar.component';
+import { HeaderComponent } from './shared/component/header/header.component';
+import { FooterComponent } from './shared/component/footer/footer.component';
 import { DashboardComponent } from './core/component/dashboard/dashboard.component';
 import { AddClientComponent } from './core/component/add-client/add-client.component';
 import { ManageClientComponent } from './core/component/manage-client/manage-client.component';
@@ -36,16 +36,16 @@ const routes: Routes = [
   {path : 'manage-user' , component : ManageUserComponent},
   {path : 'master-asset' , component : AddMasterAssetComponent},
   {path : 'manage-master-asset' , component : ManageMasterAssetComponent},
-  {path : 'contact' , component : ContactComponent},  
-  {path : 'queries' , component : QueriesComponent},  
-  {path : 'audits' , component : AuditsComponent},  
-  {path : 'report-one' , component : ReportOneComponent},  
+  {path : 'contact' , component : ContactComponent},
+  {path : 'queries' , component : QueriesComponent},
+  {path : 'audits' , component : AuditsComponent},
+  {path : 'report-one' , component : ReportOneComponent},
 
 
 
 
 ];
- 
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
