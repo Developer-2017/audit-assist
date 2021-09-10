@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class SidebarComponent implements OnInit {
   public isMenuOpen:boolean=false;
   constructor() { }
-
+   openMenu(x : any){
+      x.open();
+   }
   ngOnInit(): void {
   }
 

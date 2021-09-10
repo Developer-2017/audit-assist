@@ -89,7 +89,7 @@ body {
 #page-container,
 #sidebar,
 #sidebar-alt {
-  background-color: #009EFF;
+  background-color: #394263;
 }
 
 #sidebar,
@@ -411,9 +411,8 @@ header.navbar-inverse.navbar-fixed-bottom {
 }
 
 /* Sidebar Brand + Title */
-.sidebar-brand,
-.sidebar-title {
-  height: 60px;
+.sidebar-brand, .sidebar-title {
+  height: 50px;
   line-height: 50px;
   padding: 0 10px;
   margin: 0;
@@ -4131,4 +4130,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 #page-content{
   height: 90vh;
+}
+@media screen and (min-width: 768px){
+.content-header, .content-top, .breadcrumb-top {
+    margin: 1px 0px 20px;
+    }
 }
