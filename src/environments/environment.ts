@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseURL: 'http://api.lmlventures.in/api',
+  authKey:'FnWG4HnV8TZY30TiOdtVWMJ8abWvB1GlOgJuQZdcF2LqUm',
 };
 
 /*
