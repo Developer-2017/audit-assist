@@ -29,6 +29,7 @@ import { QueriesComponent } from './core/component/queries/queries.component';
 import { AuditsComponent } from './core/component/audits/audits.component';
 import { ReportOneComponent } from './core/component/report-one/report-one.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { HttpClientModule } from '@angular/common/http';
     AgGridModule,
     MatAutocompleteModule,
     HttpClientModule,
-    NgxFileDropModule
+    NgxFileDropModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

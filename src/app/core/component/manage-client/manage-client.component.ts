@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ClientService } from '../../service/client/client.service';
 @Component({
   selector: 'app-manage-client',
   templateUrl: './manage-client.component.html',
@@ -21,9 +21,12 @@ rowData = [
     { ClientCode: 'Porsche', ClientAlias: 'Boxter', SPOCName: 72000 , SPOCEmail :'NA' ,SPOCMobile : "NA"}
 ];
 
-  constructor() { }
+  constructor(private api: ClientService) { }
 
   ngOnInit(): void {
+    this.api.addClientdata().subscribe(response=>{
+       console.log(response);
+    })
   }
    
 

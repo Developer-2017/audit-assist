@@ -18,14 +18,14 @@
                 <h2>Fill Client Details</h2>
             </div>
             <!-- END Progress Bar Wizard Title -->
-
+             <form [formGroup]="clientFormData">
             <!-- Progress Bar Wizard Content -->
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-control my_border">
                     <mat-form-field appearance="outline">
                         <mat-label>Add Client Code</mat-label>
-                   <input matInput>
+                   <input matInput formControlName="clientCode">
                     </mat-form-field>
                     </div>
                   </div>
@@ -34,7 +34,7 @@
                     <div class="form-control my_border">
                     <mat-form-field appearance="outline">
                         <mat-label>Enter Organization Name</mat-label>
-                   <input matInput>
+                   <input matInput formControlName="organizationName">
                     </mat-form-field>
                     </div>
                   </div>
@@ -42,7 +42,7 @@
                     <div class="form-control my_border">
                         <mat-form-field appearance="outline">
                             <mat-label>Enter SPOC Name</mat-label>
-                       <input matInput>
+                       <input matInput formControlName="sPOCName">
                         </mat-form-field>
                         </div>               
                 </div>
@@ -50,7 +50,7 @@
                     <div class="form-control my_border">
                         <mat-form-field appearance="outline">
                             <mat-label>Enter Client Alias</mat-label>
-                       <input matInput>
+                       <input matInput formControlName="clientAlias">
                         </mat-form-field>
                         </div>               
                 </div>
@@ -58,7 +58,7 @@
                     <div class="form-control my_border">
                         <mat-form-field appearance="outline">
                             <mat-label>Enter SPOC Mobile</mat-label>
-                       <input matInput>
+                       <input matInput formControlName="sPOCMobile">
                         </mat-form-field>
                         </div>               
                 </div>
@@ -66,7 +66,7 @@
                     <div class="form-control my_border">
                         <mat-form-field appearance="outline">
                             <mat-label>Enter Escalation Name</mat-label>
-                       <input matInput>
+                       <input matInput formControlName="escalationName">
                         </mat-form-field>
                         </div>               
                 </div>    
@@ -75,42 +75,40 @@
                     <div class="form-control my_border">
                         <mat-form-field appearance="outline">
                             <mat-label>Enter SPOC Email</mat-label>
-                       <input matInput>
+                       <input matInput formControlName="sPOCEmail">
                         </mat-form-field>
                         </div>
                 </div> 
                 <div class="col-md-8">
                     <div class="form-control my_border">
                         <mat-form-field appearance="outline">
-                            <mat-label>Add Client Code</mat-label>
-                       <input matInput>
+                            <mat-label>Enter Escalation Mobile</mat-label>
+                       <input matInput formControlName="escalationMobile">
                         </mat-form-field>
                         </div>
                 </div> 
                 <div class="col-md-4">
                     <div class="form-control my_border">
                         <mat-form-field appearance="outline">
-                            <mat-label>Add Client Code</mat-label>
-                       <input matInput>
+                            <mat-label>Enter Escalation Email</mat-label>
+                       <input matInput formControlName="escalationEmail">
                         </mat-form-field>
                         </div>
                 </div> 
                 <div class="col-md-8">
                     <div class="form-control my_border">
                         <mat-form-field appearance="outline">
-                            <mat-label>Add Client Code</mat-label>
-                       <input matInput>
+                            <mat-label>Enter Address</mat-label>
+                       <input matInput formControlName="address">
                         </mat-form-field>
                         </div>
                 </div> 
                 <div class="col-md-12">
                     <button mat-raised-button class="btn btn-warning float-end m-2">Reset</button>
-                    <button mat-raised-button class="btn btn-success float-end m-2">Save</button>
+                    <button (click)="submitData()" mat-raised-button class="btn btn-success float-end m-2">Save</button>
                     </div>
-           
             </div>
-           
-            
+        </form>
         </div>
     </div>
 </div>
