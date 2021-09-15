@@ -29,14 +29,7 @@ import { QueriesComponent } from './core/component/queries/queries.component';
 import { AuditsComponent } from './core/component/audits/audits.component';
 import { ReportOneComponent } from './core/component/report-one/report-one.component';
 import { HttpClientModule } from '@angular/common/http';
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
-import { EntityDataModule } from '@ngrx/data';
-import { entityConfig } from './entity-metadata';
-
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from '../environments/environment'
-import { ToastrModule } from 'ngx-toastr';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -72,18 +65,7 @@ import { ToastrModule } from 'ngx-toastr';
     MatAutocompleteModule,
     HttpClientModule,
     NgxFileDropModule,
-    // StoreModule.forRoot(reducers,{
-    //   metaReducers
-    // }),
-    // EffectsModule.forRoot(effects),
-    EntityDataModule.forRoot(entityConfig),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    ToastrModule.forRoot({
-      timeOut: 10000,
-      positionClass: "toast-bottom-right",
-      preventDuplicates: true,
-    }),
-
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

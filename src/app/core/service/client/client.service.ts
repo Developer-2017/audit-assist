@@ -1,19 +1,28 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { ADD_NEW_CLIENT } from '../../constants';
-import { ClientData } from '../../data-models/client';
-import { map } from 'rxjs/operators';
+import {HttpClient} from '@angular/common/http';
+import { ClientModel } from '../../data-models/clients/client.model';
+import {map} from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
+import {ADD_CLIENT} from '../../constants';
+import { GET_CLIENT } from '../../constants';
 @Injectable({
   providedIn: 'root'
 })
 export class ClientService {
+    baseUrl = environment.baseURL;
 
-  constructor(private httpClient :HttpClient) { }
-  createNewClient(client:ClientData):Observable<ClientData>{
-    return this.httpClient.post<ClientData>(ADD_NEW_CLIENT,client).pipe(
-      map(data=>data as ClientData))
-   }
+  constructor(private http:HttpClient) { }
 
-
+    createClientData(ClientModel : ClientModel){
+      return this.http.post(this.baseUrl + ADD_CLIENT,ClientModel)
+      .pipe(map((res : any)=>{
+        return res;
+      }))
+    }
+    addClientdata(){
+       return this.http.get(this.baseUrl + GET_CLIENT)
+       .pipe(map((res : any)=>{
+         return res;
+       }))
+    }
 }

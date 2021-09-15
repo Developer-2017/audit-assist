@@ -13,7 +13,7 @@ export class AppComponent {
     // on route change to '/login', set the variable showHead to false
       router.events.forEach((event) => {
         if (event instanceof NavigationStart) {
-          console.log(event)
+            console.log(event)
           if (event['url'] == '/login' || event['url'] == '/') {
             this.showHead = false;
           } else {
@@ -31,7 +31,6 @@ export class AppComponent {
     this.isShown = ! this.isShown;
     }
   ngOnInit() {
-
   }
 
 
