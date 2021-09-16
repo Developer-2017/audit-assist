@@ -15,7 +15,7 @@ export class AddClientComponent implements OnInit {
     this.clientFormData = new FormGroup({
       clientCode: new FormControl(""),
       clientAlias: new FormControl(""),
-      organizationName: new FormControl(" "),
+      organizationName: new FormControl(""),
       sPOCName: new FormControl(""),
       sPOCEmail: new FormControl(""),
       sPOCMobile: new FormControl(""),
@@ -37,7 +37,6 @@ export class AddClientComponent implements OnInit {
         })
   }
   resetData() {
-
     this.clientFormData.reset();
   }
 }
