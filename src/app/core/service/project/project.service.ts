@@ -25,7 +25,7 @@ export class ProjectService {
   }
 
   getProjectDataById(clientId:any){
-    return this.http.get(this.baseUrl + GET_PROJECT_BY_CLIENTID,clientId)
+    return this.http.get(this.baseUrl + GET_PROJECT_BY_CLIENTID + clientId)
     .pipe(map((res : any)=>{
       return res;
     }))

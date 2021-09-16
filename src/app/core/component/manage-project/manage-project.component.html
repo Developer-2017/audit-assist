@@ -22,7 +22,7 @@
                         <mat-form-field appearance="outline">
                             <mat-label>Choose a Client</mat-label>
                             <mat-select >
-                              <mat-option (onSelectionChange)="getClientAlias(client.Id)" [value]="client.Id" *ngFor="let client of clientAlias">
+                              <mat-option (onSelectionChange)="getProjectById(client.Id)" [value]="client.Id" *ngFor="let client of clientAlias">
                                 {{client.ClientAlias}}
                               </mat-option>
                             </mat-select>
@@ -32,7 +32,7 @@
                   </form>
             </div>
             <!-- END Progress Bar Wizard Title -->
-    
+
             <!-- Progress Bar Wizard Content -->
     </div>
     </div>
