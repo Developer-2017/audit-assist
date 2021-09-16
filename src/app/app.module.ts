@@ -34,9 +34,19 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { MenuDropDownRendrer } from './shared/component/menudropdown_rendrer/menu_dropdown_rendrer';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
+
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { NotSpecialCharsDirective } from './shared/directives/not-special-chars.directive';
+import { UpperCaseDirective } from './shared/directives/upper-case.directive';
+import { TitleCaseDirective } from './shared/directives/title-case.directive';
+import { NumberOnlyDirective } from './shared/directives/number-only.directive';
 @NgModule({
   declarations: [
     AppComponent,
+    TitleCaseDirective,
+    UpperCaseDirective,
+    NumberOnlyDirective,
+    NotSpecialCharsDirective,
     LoginComponent,
     SidebarComponent,
     HeaderComponent,
@@ -55,13 +65,16 @@ import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
     AuditsComponent,
     MenuDropDownRendrer,
     ReportOneComponent,
+
   ],
   imports: [
+
     NgxMatSelectSearchModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
+    MatProgressSpinnerModule,
     MatSelectModule,
     MatMenuModule,
     MatButtonModule,

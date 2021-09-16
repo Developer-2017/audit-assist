@@ -25,15 +25,27 @@
             <div class="form-control my_border">
               <mat-form-field appearance="outline">
                 <mat-label>Add Client Code</mat-label>
-                <input matInput formControlName="clientCode">
+                <input matInput formControlName="clientCode" appUpperCase appNotSpecialChars="noSpecialChars"  >
+                <mat-error> Client code is Required</mat-error>
               </mat-form-field>
             </div>
           </div>
           <div class="col-md-4">
             <div class="form-control my_border">
               <mat-form-field appearance="outline">
-                <mat-label>Enter Organization Name</mat-label>
-                <input matInput formControlName="organizationName">
+                <mat-label>Add Organization Name</mat-label>
+                <input matInput formControlName="organizationName" appTitleCase >
+                <mat-error> Orgination Name is Required</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="form-control my_border">
+              <mat-form-field appearance="outline">
+                <mat-label>Enter Client Alias</mat-label>
+                <input matInput formControlName="clientAlias"  appNotSpecialChars="textOnly" maxlength="90" >
+                <mat-error> Client Alias is Required</mat-error>
               </mat-form-field>
             </div>
           </div>
@@ -41,31 +53,17 @@
             <div class="form-control my_border">
               <mat-form-field appearance="outline">
                 <mat-label>Enter SPOC Name</mat-label>
-                <input matInput formControlName="sPOCName">
-              </mat-form-field>
+                <input matInput formControlName="sPOCName" appTitleCase appNotSpecialChars="textOnly" maxlength="90" >
+                <mat-error> SPOC Name is Required</mat-error>   </mat-form-field>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="form-control my_border">
-              <mat-form-field appearance="outline">
-                <mat-label>Enter Client Alias</mat-label>
-                <input matInput formControlName="clientAlias">
-              </mat-form-field>
-            </div>
-          </div>
+
           <div class="col-md-4">
             <div class="form-control my_border">
               <mat-form-field appearance="outline">
                 <mat-label>Enter SPOC Mobile</mat-label>
-                <input matInput formControlName="sPOCMobile">
-              </mat-form-field>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="form-control my_border">
-              <mat-form-field appearance="outline">
-                <mat-label>Enter Escalation Name</mat-label>
-                <input matInput formControlName="escalationName">
+                <input matInput formControlName="sPOCMobile" numbersOnly maxlength="10">
+                <mat-error> SPOC Mobile is Required</mat-error>
               </mat-form-field>
             </div>
           </div>
@@ -74,15 +72,27 @@
             <div class="form-control my_border">
               <mat-form-field appearance="outline">
                 <mat-label>Enter SPOC Email</mat-label>
-                <input matInput formControlName="sPOCEmail">
+                <input matInput formControlName="sPOCEmail" maxlength="200">
+                <mat-error> SPOC Email is Required</mat-error>
               </mat-form-field>
             </div>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-4">
+            <div class="form-control my_border">
+              <mat-form-field appearance="outline">
+                <mat-label>Enter Escalation Name</mat-label>
+                <input matInput formControlName="escalationName" appNotSpecialChars="textOnly" >
+                <mat-error> Escalation Name is Required</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="col-md-4">
             <div class="form-control my_border">
               <mat-form-field appearance="outline">
                 <mat-label>Enter Escalation Mobile</mat-label>
-                <input matInput formControlName="escalationMobile">
+                <input matInput formControlName="escalationMobile"  numbersOnly maxlength="10">
+                <mat-error> Escalation Mobile is Required</mat-error>
               </mat-form-field>
             </div>
           </div>
@@ -90,21 +100,32 @@
             <div class="form-control my_border">
               <mat-form-field appearance="outline">
                 <mat-label>Enter Escalation Email</mat-label>
-                <input matInput formControlName="escalationEmail">
+                <input matInput formControlName="escalationEmail" maxlength="200">
+                <mat-error *ngIf="clientFormData.hasError('required','escalationEmail') && !clientFormData.get('escalationEmail')?.pristine">Email is required</mat-error>
+                <mat-error *ngIf="clientFormData.hasError('email','escalationEmail') && !clientFormData.get('escalationEmail')?.pristine">Email is not valid</mat-error>
               </mat-form-field>
             </div>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-12">
             <div class="form-control my_border">
               <mat-form-field appearance="outline">
                 <mat-label>Enter Address</mat-label>
-                <input matInput formControlName="address">
+                <textarea matInput formControlName="address" ></textarea>
+                <mat-error> Escalation Address is Required</mat-error>
               </mat-form-field>
             </div>
           </div>
           <div class="col-md-12">
             <button (click)="resetData()"  mat-raised-button  class="btn btn-warning float-end m-2">Reset</button>
-            <button (click)="submitData()" mat-raised-button class="btn btn-success float-end m-2">Save</button>
+            <button (click)="submitData()" [disabled]="!clientFormData.valid" mat-raised-button
+            class="btn btn-success float-end m-2">
+            <ng-container *ngIf="!isLoading"> Save</ng-container>
+              <mat-spinner
+              *ngIf="isLoading"
+              diameter="20"
+            ></mat-spinner>
+
+            </button>
           </div>
         </div>
       </form>

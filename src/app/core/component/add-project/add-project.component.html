@@ -18,7 +18,7 @@
                 <h2>Fill Project Details</h2>
             </div>
             <!-- END Progress Bar Wizard Title -->
-    
+
             <!-- Progress Bar Wizard Content -->
             <div class="row">
                 <div class="col-md-4">
@@ -29,7 +29,7 @@
                     </mat-form-field>
                     </div>
                   </div>
-               
+
                 <div class="col-md-4">
                     <div class="form-control my_border">
                     <mat-form-field appearance="outline">
@@ -38,43 +38,48 @@
                     </mat-form-field>
                     </div>
                   </div>
-                <div class="col-md-4"> 
+                <div class="col-md-4">
                     <div class="form-control my_border">
                         <mat-form-field appearance="outline">
                             <mat-label>Enter Project Name</mat-label>
                        <input matInput>
                         </mat-form-field>
-                        </div>               
+                        </div>
                 </div>
-                <div class="col-md-4"> 
+                <div class="col-md-4">
                     <div class="form-control my_border">
                         <mat-form-field appearance="outline">
                             <mat-label>Choose a Client</mat-label>
-                            <mat-select matNativeControl >
-                               <mat-option >Select</mat-option> 
-                              <mat-option [value]="client.id" *ngFor="let client of clientAlias">{{client.ClientAlias}}</mat-option>
+                            <mat-select matNativeControl  formControlName="ClientId">
+                               <mat-option >Select</mat-option>
+                              <mat-option [value]="client.id"
+                              *ngFor="let client of clientAlias">{{client.ClientAlias}}</mat-option>
                             </mat-select>
                           </mat-form-field>
-                        </div>               
+                        </div>
                 </div>
-                <div class="col-md-8"> 
+                <div class="col-md-8">
                     <div class="form-control my_border">
                         <mat-form-field appearance="outline">
                             <mat-label>Choose Columns..</mat-label>
-                            <mat-select  multiple>
+                            <mat-select  multiple  formControlName="RequiredColumns">
+                              <mat-option>
+                                <ngx-mat-select-search placeholderLabel="Search Columns"
+                                ></ngx-mat-select-search>
+                              </mat-option>
                               <mat-option [value]="required" *ngFor="let required of requiredColumns">{{required}}</mat-option>
                             </mat-select>
                           </mat-form-field>
-                        </div>               
-                </div>   
+                        </div>
+                </div>
                 <div class="col-md-12">
                     <button mat-raised-button class="btn btn-warning float-end m-2">Reset</button>
                     <button mat-raised-button class="btn btn-success float-end m-2">Save</button>
                     </div>
-           
+
             </div>
-           
-            
+
+
         </div>
     </div>
 </div>

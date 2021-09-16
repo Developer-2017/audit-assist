@@ -4130,7 +4130,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 100%;
 }
 #page-content{
-     height: 95vh;
+     height: 105vh;
 }
 @media screen and (min-width: 768px){
 .content-header, .content-top, .breadcrumb-top {

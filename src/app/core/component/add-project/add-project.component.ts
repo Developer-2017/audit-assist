@@ -22,9 +22,9 @@ export class AddProjectComponent implements OnInit {
      this.api.getProjectdata()
      .subscribe(res=>{
        this.clientAlias = res;
-        // console.log(this.Alias);
+        console.log(this.clientAlias);
         // console.log(this.requiredColumns);
      })
-  } 
+  }
 
 }
