@@ -30,6 +30,7 @@ import { AuditsComponent } from './core/component/audits/audits.component';
 import { ReportOneComponent } from './core/component/report-one/report-one.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatAutocompleteModule,
     HttpClientModule,
     NgxFileDropModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      positionClass: "toast-bottom-right",
+      preventDuplicates: true,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -938,8 +938,9 @@ a.sidebar-title:focus {
 
 .block-title {
   margin: -20px -15px 20px;
-  background-color: #f9fafc;
-  border-bottom: 1px solid #eaedf1;
+  color: #fff;
+  background-color: #1da7fd;
+  border-bottom: 1px solid #1da7fd;
 }
 
 .block-title h1,
@@ -4129,7 +4130,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 100%;
 }
 #page-content{
-     height: 90vh;
+     height: 95vh;
 }
 @media screen and (min-width: 768px){
 .content-header, .content-top, .breadcrumb-top {
