@@ -38,7 +38,7 @@ export class AddClientComponent implements OnInit {
       },
         error => {
           this.isLoading = false;
-          this.toastr.success('something went wrong');
+          this.toastr.error('something went wrong');
           console.log(error);
         })
       }

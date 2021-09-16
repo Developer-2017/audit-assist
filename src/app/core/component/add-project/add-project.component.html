@@ -26,7 +26,7 @@
                     <div class="form-control my_border">
                     <mat-form-field appearance="outline">
                         <mat-label>Enter Project Code</mat-label>
-                   <input matInput formControlName="ProjectCode">
+                   <input matInput formControlName="ProjectCode" appUpperCase appNotSpecialChars="noSpecialChars">
                     </mat-form-field>
                     </div>
                   </div>
@@ -35,7 +35,7 @@
                     <div class="form-control my_border">
                     <mat-form-field appearance="outline">
                         <mat-label>Enter Project Alias</mat-label>
-                   <input matInput formControlName="ProjectAlias">
+                   <input matInput formControlName="ProjectAlias" appTitleCase>
                     </mat-form-field>
                     </div>
                   </div>
@@ -43,7 +43,7 @@
                     <div class="form-control my_border">
                         <mat-form-field appearance="outline">
                             <mat-label>Enter Project Name</mat-label>
-                       <input matInput formControlName="ProjectName">
+                       <input matInput formControlName="ProjectName" appTitleCase>
                         </mat-form-field>
                         </div>
                 </div>
@@ -51,10 +51,10 @@
                     <div class="form-control my_border">
                         <mat-form-field appearance="outline">
                             <mat-label>Choose a Client</mat-label>
-                            <mat-select matNativeControl  formControlName="ClientId">
-                               <mat-option >Select</mat-option>
-                              <mat-option [value]="client.id"
-                              *ngFor="let client of clientAlias">{{client.ClientAlias}}</mat-option>
+                            <mat-select  formControlName="ClientId">
+                              <mat-option [value]="client.Id" *ngFor="let client of clientAlias">
+                                {{client.ClientAlias}}
+                              </mat-option>
                             </mat-select>
                           </mat-form-field>
                         </div>

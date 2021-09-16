@@ -17,10 +17,10 @@ export class ProjectService {
       return res;
     }))
   }
-  getProjectdata(){
-    return this.http.get(this.baseUrl + GET_CLIENT,)
-    .pipe(map((res : any)=>{
-      return res;
-    }))
- }
+//   getProjectdata(){
+//     return this.http.get(this.baseUrl + GET_CLIENT,)
+//     .pipe(map((res : any)=>{
+//       return res;
+//     }))
+//  }
 }
