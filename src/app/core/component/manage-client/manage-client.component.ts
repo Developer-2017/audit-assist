@@ -24,10 +24,12 @@ rowData = [
   constructor(private api: ClientService) { }
 
   ngOnInit(): void {
-    this.api.addClientdata().subscribe(response=>{
-       console.log(response);
-    })
+    this.getData();
   }
-   
+    getData(){
+      this.api.getClientdata().subscribe(res=>{
+        console.log(res);
+     })
+    }
 
 }
