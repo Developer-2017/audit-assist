@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
 import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import { ManageClientComponent } from './core/component/manage-client/manage-client.component';
@@ -31,7 +32,8 @@ import { ReportOneComponent } from './core/component/report-one/report-one.compo
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
-
+import { MenuDropDownRendrer } from './shared/component/menudropdown_rendrer/menu_dropdown_rendrer';
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,14 +53,17 @@ import { ToastrModule } from 'ngx-toastr';
     ContactComponent,
     QueriesComponent,
     AuditsComponent,
+    MenuDropDownRendrer,
     ReportOneComponent,
   ],
   imports: [
+    NgxMatSelectSearchModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
     MatSelectModule,
+    MatMenuModule,
     MatButtonModule,
     MatIconModule,
     MatDialogModule,

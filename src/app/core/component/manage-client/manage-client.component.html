@@ -18,22 +18,23 @@
                 <h2><strong>Clients </strong>Added</h2>
             </div>
             <!-- END Progress Bar Wizard Title -->
-    
+
             <!-- Progress Bar Wizard Content -->
             <div class="row">
-                
+
                     <ag-grid-angular
                     style="width: 100%; height: 380px;"
                     class="ag-theme-balham"
+                    [frameworkComponents]="frameworkComponents"
                     [rowData]="rowData"
+                    [defaultColDef]="defaultColDef"
                     [columnDefs]="columnDefs">
                    </ag-grid-angular>
-                  
-              
+
+
             </div>
             <!-- END Progress Bar Wizard Content -->
         </div>
     </div>
 
-   
-   
+
