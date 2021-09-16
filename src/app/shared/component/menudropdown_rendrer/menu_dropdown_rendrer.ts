@@ -29,7 +29,4 @@ public dataMap !: [{name:string,class:string,callback():void}];
   btnClickedHandler(event:any) {
     this.params.clicked();
   }
-
-
-
 }
