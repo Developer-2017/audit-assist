@@ -17,18 +17,18 @@
             <div class="block-title">
                 <h2>Projects Added</h2>
                 <form class="example-form">
-                    <mat-form-field class="example-full-width" appearance="outline">
-                      <mat-label>Choose a Client</mat-label>
-                      <input type="text"
-                             placeholder="Pick one"
-                             aria-label="Number"
-                             matInput
-                             [matAutocomplete]="auto">
-                      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                        <mat-option >
-                        </mat-option>
-                      </mat-autocomplete>
-                    </mat-form-field>
+                    <div class="col-md-12">
+                   <div class="form-control my_border">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Choose a Client</mat-label>
+                            <mat-select >
+                              <mat-option (onSelectionChange)="getClientAlias(client.Id)" [value]="client.Id" *ngFor="let client of clientAlias">
+                                {{client.ClientAlias}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                        </div>
+          </div>
                   </form>
             </div>
             <!-- END Progress Bar Wizard Title -->
