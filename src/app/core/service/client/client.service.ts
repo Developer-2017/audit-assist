@@ -10,9 +10,7 @@ import { GET_CLIENT } from '../../constants';
 })
 export class ClientService {
     baseUrl = environment.baseURL;
-
-  constructor(private http:HttpClient) { }
-
+      constructor(private http:HttpClient) { }
     createClientData(ClientModel : ClientModel){
       return this.http.post(this.baseUrl + ADD_CLIENT,ClientModel)
       .pipe(map((res : any)=>{
