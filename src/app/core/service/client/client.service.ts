@@ -19,8 +19,8 @@ export class ClientService {
         return res;
       }))
     }
-    addClientdata(){
-       return this.http.get(this.baseUrl + GET_CLIENT)
+    getClientdata(){
+       return this.http.get(this.baseUrl + GET_CLIENT,)
        .pipe(map((res : any)=>{
          return res;
        }))

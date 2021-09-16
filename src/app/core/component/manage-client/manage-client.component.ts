@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClientData } from '../../data-models/client';
 import { ClientService } from '../../service/client/client.service';
 @Component({
   selector: 'app-manage-client',
@@ -6,6 +7,7 @@ import { ClientService } from '../../service/client/client.service';
   styleUrls: ['./manage-client.component.css']
 })
 export class ManageClientComponent implements OnInit {
+  rowData:ClientData[]|undefined
   columnDefs = [
     {headerName: 'Client Code', field: 'ClientCode' },
 		{headerName: 'Client Alias', field: 'ClientAlias' },
@@ -15,19 +17,20 @@ export class ManageClientComponent implements OnInit {
 
 ];
 
-rowData = [
-    { ClientCode: 'Toyota', ClientAlias: 'Celica', SPOCName: 35000 , SPOCEmail: 'NA', SPOCMobile : 'NA'},
-    { ClientCode: 'Ford', ClientAlias: 'Mondeo', SPOCName: 32000 , SPOCEmail : 'Na',SPOCMobile : 'NA'},
-    { ClientCode: 'Porsche', ClientAlias: 'Boxter', SPOCName: 72000 , SPOCEmail :'NA' ,SPOCMobile : "NA"}
-];
-
   constructor(private api: ClientService) { }
 
   ngOnInit(): void {
-    this.api.addClientdata().subscribe(response=>{
-       console.log(response);
+    this.api.getClientdata()
+    .subscribe(response=>{
+      console.log(response);
+    this.rowData=response
+    console.log("vdf"+this.rowData);
+      alert("Successfully");
+    },
+    error=>{
+      console.log(error);
     })
   }
-   
+
 
 }
