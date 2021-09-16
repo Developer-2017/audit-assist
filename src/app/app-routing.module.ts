@@ -42,9 +42,6 @@ const routes: Routes = [
   {path : 'audits' , component : AuditsComponent},
   {path : 'report-one' , component : ReportOneComponent},
 
-
-
-
 ];
 
 @NgModule({

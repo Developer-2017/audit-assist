@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  baseURL : "http://api.lmlventures.in/api/"
+  baseURL: 'http://api.lmlventures.in/api/',
+  authKey:'FnWG4HnV8TZY30TiOdtVWMJ8abWvB1GlOgJuQZdcF2LqUm',
+
 };
 
 /*

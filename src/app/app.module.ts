@@ -61,7 +61,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatIconModule,
     MatDialogModule,
-    AgGridModule,
+    AgGridModule.withComponents([]),
     MatAutocompleteModule,
     HttpClientModule,
     NgxFileDropModule,
