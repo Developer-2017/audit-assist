@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../../service/project/project.service';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { ClientService } from '../../service/client/client.service';
 import { ProjectData } from '../../data-models/project';
@@ -13,7 +13,7 @@ import { ProjectData } from '../../data-models/project';
 export class AddProjectComponent implements OnInit {
   projectFormData!: FormGroup;
   clientAlias: any = [];
-
+  isLoading:boolean=false;
   requiredColumns: string[] = ['AssetAlias', 'AssetBarCode'
     , 'AssetLocation',
     'AssetSubLocation', 'AuditObservations',
@@ -29,11 +29,11 @@ export class AddProjectComponent implements OnInit {
     private toastr: ToastrService) { }
   ngOnInit(): void {
     this.projectFormData = new FormGroup({
-      ClientId: new FormControl(""),
-      ProjectCode: new FormControl(""),
-      ProjectAlias: new FormControl(""),
-      ProjectName: new FormControl(""),
-      RequiredColumns: new FormControl(null)
+      ClientId: new FormControl("",[Validators.required]),
+      ProjectCode: new FormControl("",[Validators.required]),
+      ProjectAlias: new FormControl("",[Validators.required]),
+      ProjectName: new FormControl("",[Validators.required]),
+      RequiredColumns: new FormControl("",[Validators.required]),
     })
     this.clientService.getClientdata()
       .subscribe(res => {
@@ -53,17 +53,22 @@ export class AddProjectComponent implements OnInit {
 //      ...this.projectFormData.value,
 //     RequiredColumns:this.projectFormData.value.RequiredColumns.toString(),
 //   }))
-
+this.isLoading=true;
       this.api.createProjectData(projectList)
     .subscribe(response => {
       console.log(response);
+      this.isLoading=false;
       this.toastr.success('Proejct Added Successfully');
       this.projectFormData.reset();
     },
       error => {
+        this.isLoading=false;
         this.toastr.error('something went wrong');
         console.log(error);
       })
    }
-
+   resetData()
+   {
+    this.projectFormData.reset();
+   }
 }

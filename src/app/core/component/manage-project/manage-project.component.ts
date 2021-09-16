@@ -10,6 +10,7 @@ export class ManageProjectComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

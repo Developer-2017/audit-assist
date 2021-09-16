@@ -74,9 +74,18 @@
                         </div>
                 </div>
                 <div class="col-md-12">
-                    <button mat-raised-button class="btn btn-warning float-end m-2">Reset</button>
-                    <button (click)="submitData()" mat-raised-button class="btn btn-success float-end m-2">Save</button>
-                    </div>
+                  <button (click)="resetData()"  mat-raised-button  class="btn btn-warning float-end m-2">Reset</button>
+                  <button (click)="submitData()" [disabled]="!projectFormData.valid" mat-raised-button
+                  class="btn btn-success float-end m-2">
+                  <ng-container *ngIf="!isLoading"> Save</ng-container>
+                    <mat-spinner
+                    *ngIf="isLoading"
+                    diameter="20"
+                  ></mat-spinner>
+
+                  </button>
+                </div>
+
 
             </div>
 
