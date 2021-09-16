@@ -34,4 +34,7 @@ export class AddClientComponent implements OnInit {
          console.log(error);
        })  
     }
+    reset(){
+       this.clientFormData.reset();
+    }
 }
