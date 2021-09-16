@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {map} from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { GET_CLIENT } from '../../constants';
+import { GET_PROJECT_BY_CLIENTID } from '../../constants';
 import { ProjectData } from '../../data-models/project';
 import { ADD_PROJECT } from '../../constants';
 @Injectable({
@@ -18,7 +18,7 @@ export class ProjectService {
     }))
   }
   getProjectdata(clientId:any){
-    return this.http.get(this.baseUrl + GET_CLIENT,clientId)
+    return this.http.get(this.baseUrl + GET_PROJECT_BY_CLIENTID,clientId)
     .pipe(map((res : any)=>{
       return res;
     }))
