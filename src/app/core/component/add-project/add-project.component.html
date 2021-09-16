@@ -20,12 +20,13 @@
             <!-- END Progress Bar Wizard Title -->
 
             <!-- Progress Bar Wizard Content -->
+            <form [formGroup]="projectFormData">
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-control my_border">
                     <mat-form-field appearance="outline">
                         <mat-label>Enter Project Code</mat-label>
-                   <input matInput>
+                   <input matInput formControlName="ProjectCode">
                     </mat-form-field>
                     </div>
                   </div>
@@ -34,7 +35,7 @@
                     <div class="form-control my_border">
                     <mat-form-field appearance="outline">
                         <mat-label>Enter Project Alias</mat-label>
-                   <input matInput>
+                   <input matInput formControlName="ProjectAlias">
                     </mat-form-field>
                     </div>
                   </div>
@@ -42,7 +43,7 @@
                     <div class="form-control my_border">
                         <mat-form-field appearance="outline">
                             <mat-label>Enter Project Name</mat-label>
-                       <input matInput>
+                       <input matInput formControlName="ProjectName">
                         </mat-form-field>
                         </div>
                 </div>
@@ -74,12 +75,11 @@
                 </div>
                 <div class="col-md-12">
                     <button mat-raised-button class="btn btn-warning float-end m-2">Reset</button>
-                    <button mat-raised-button class="btn btn-success float-end m-2">Save</button>
+                    <button (click)="submitData()" mat-raised-button class="btn btn-success float-end m-2">Save</button>
                     </div>
 
             </div>
 
-
-        </div>
+            </form>
     </div>
 </div>
