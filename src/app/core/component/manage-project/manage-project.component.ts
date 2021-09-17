@@ -17,7 +17,6 @@ export class ManageProjectComponent implements OnInit {
   }
 
   getProjectById(Client: any){
-
      this.project.getProjectDataById(Client)
      .subscribe(response=>{
       console.log(response);

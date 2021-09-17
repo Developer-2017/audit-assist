@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { UserData } from '../../data-models/user';
+import { UserService } from '../../service/user/user.service';
 
 @Component({
   selector: 'app-manage-user',
@@ -6,29 +9,65 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./manage-user.component.css']
 })
 export class ManageUserComponent implements OnInit {
-
+  rowData: UserData[] | undefined
   columnDefs = [
-    {headerName: 'Emp Code', field: 'EmpCode',},
-		{headerName: 'Name', field: 'Name' },
-		{headerName: 'Last Name', field: 'LastName'},
-    {headerName: 'Mobile', field: 'Mobile'},
-    {headerName: 'Password', field: 'Password'},
-    {headerName: 'DeviceId', field: 'DeviceId'},
-    {headerName: 'Status', field: 'Status'},
-    {headerName: 'Action', field: 'Action',cellRenderer : function(){
-      return '<div class="grid_btn"><button class="btn btn-default btn-sm"><i class="fa fa-paper-plane-o"></i></button><button class="btn btn-danger btn-sm"><i class="fa fa-times"></i></button></div>'
-  }},
-];
+    { headerName: 'Emp Code', field: 'EmpCode', },
+    { headerName: 'Name', field: 'FName' },
+    { headerName: 'Last Name', field: 'LName' },
+    { headerName: 'Mobile', field: 'Mobile' },
+    { headerName: 'Password', field: 'Password' },
+    { headerName: 'DeviceId', field: 'eviceId' },
+  //   {
+  //     headerName: 'Status', field: 'Status', cellClass: "grid-cell-centered", cellRenderer: function () {
+  //       return '<span class="label label-success text-white">Active</span>'
+  //   }
+  // },
+  {
+    field: 'actions',
+    headerName: 'Actions',
+    cellRenderer: 'dropdownMenuRendrer',
+    filter: false,
+    width: 120,
+    cellRendererParams: (params: any) => ({
+      dataMap: [
+        {
+          name: 'Edit',
+          shouldShow: true,
+          callback: () => {
 
-rowData = [
-    { EmpCode: 'Toyota', Name: 'Celica', LastName: 35000 , Mobile: 'NA', Password : 'NA' , DeviceId : 'NA',Status:'NA',Action: 'NA'},
-];
-defaultColDef = {
-  autoHeight : true
-}
-  constructor() { }
+          },
+        },
+        {
+          name: "sent",
+          shouldShow: true,
+
+        }
+      ],
+    }),
+  },
+  ];
+
+  defaultColDef = {
+    filter: 'agTextColumnFilter',
+    floatingFilter: true,
+    wrapText: true,
+    sortable: true,
+    autoHeight: true,
+  };
+  constructor(private userService: UserService,private toastr:ToastrService) { }
 
   ngOnInit(): void {
+    this.getUserData();
+  }
+
+  getUserData() {
+    this.userService.getUserData().subscribe(res => {
+      this.rowData = res;
+    },
+      error => {
+        this.toastr.error('something went wrong');
+      }
+    )
   }
 
 }

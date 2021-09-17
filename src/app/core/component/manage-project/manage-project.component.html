@@ -1,38 +1,35 @@
 <div id="page-content">
-    <!-- Validation Header -->
-    <div class="content-header">
-        <div class="header-section">
-            <h1>
-                <i class="fa fa-asterisk fa-spin"></i>Manage Projects<br><small>Manage All Projects Here !</small>
-            </h1>
-        </div>
+  <!-- Validation Header -->
+  <div class="content-header">
+    <div class="header-section">
+      <h1>
+        <i class="fa fa-asterisk fa-spin"></i>Manage Projects<br><small>Manage All Projects Here !</small>
+      </h1>
     </div>
-    <ul class="breadcrumb breadcrumb-top">
-        <li class="p-project">Projects</li>
-        <li class="p-add"><a href="#">Manage</a></li>
-    </ul>
-    <div class="container-fluid">
-        <div class="block">
-            <!-- Progress Bars Wizard Title -->
-            <div class="block-title">
-                <h2>Projects Added</h2>
-                <form class="example-form">
-                    <div class="col-md-12">
-                   <div class="form-control my_border">
-                        <mat-form-field appearance="outline">
-                            <mat-label>Choose a Client</mat-label>
-                            <mat-select >
-                              <mat-option (onSelectionChange)="getProjectById(client.Id)" [value]="client.Id" *ngFor="let client of clientAlias">
-                                {{client.ClientAlias}}
-                              </mat-option>
-                            </mat-select>
-                          </mat-form-field>
-                        </div>
-          </div>
-                  </form>
+  </div>
+  <ul class="breadcrumb breadcrumb-top">
+    <li class="p-project">Projects</li>
+    <li class="p-add"><a href="#">Manage</a></li>
+  </ul>
+  <div class="container-fluid">
+    <div class="block">
+      <!-- Progress Bars Wizard Title -->
+      <div class="block-title">
+        <h2>Projects Added</h2>
+        <div class="search">
+              <mat-form-field appearance="outline">
+                <mat-label>Choose a Client</mat-label>
+                <mat-select>
+                  <mat-option (onSelectionChange)="getProjectById(client.Id)" [value]="client.Id"
+                    *ngFor="let client of clientAlias">
+                    {{client.ClientAlias}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
             </div>
-            <!-- END Progress Bar Wizard Title -->
+      </div>
+      <!-- END Progress Bar Wizard Title -->
 
-            <!-- Progress Bar Wizard Content -->
+      <!-- Progress Bar Wizard Content -->
     </div>
-    </div>
+  </div>

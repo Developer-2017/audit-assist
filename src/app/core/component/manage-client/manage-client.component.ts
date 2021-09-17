@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { MenuDropDownRendrer } from 'src/app/shared/component/menudropdown_rendrer/menu_dropdown_rendrer';
 import { ClientData } from '../../data-models/client';
 import { ClientService } from '../../service/client/client.service';
@@ -59,16 +60,18 @@ export class ManageClientComponent implements OnInit {
     },
   ];
 
-  constructor(private api: ClientService) { }
+  constructor(private api: ClientService,private toastr:ToastrService) { }
 
   ngOnInit(): void {
     this.api.getClientdata()
       .subscribe(response => {
         // console.log(response);
         this.rowData = response
+
         // console.log("vdf"+this.rowData);
       },
         error => {
+          this.toastr.error('something went wrong');
           console.log(error);
         })
   }

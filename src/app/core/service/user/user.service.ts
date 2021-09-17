@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { ADD_USER } from '../../constants';
+import { ADD_USER,GET_USER } from '../../constants';
 import { UserData } from '../../data-models/user';
 
 @Injectable({
@@ -18,5 +18,13 @@ export class UserService {
       return res;
     }))
   }
-  
+  getUserData()
+  {
+    return this.http.get(this.baseUrl + GET_USER)
+    .pipe(map((res:any)=>
+    {
+      return res
+    }))
+  }
+
 }
